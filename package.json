@@ -1,0 +1,34 @@
+{
+  "name": "load-git-config",
+  "version": "0.0.0",
+  "description": "Loads the resolved git configuration.",
+  "readme": "README.md",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "git",
+    "config"
+  ],
+  "author": "Justin Morgan <justin.l.morgan@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "lodash": "^3.9.3"
+  },
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-jshint": "^0.11.2",
+    "grunt-jscs": "^1.8.0",
+    "jit-grunt": "^0.9.1",
+    "jshint-stylish": "^2.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jlmorgan/load-git-config.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jlmorgan/load-git-config/issues"
+  },
+  "homepage": "https://github.com/jlmorgan/load-git-config#readme"
+}

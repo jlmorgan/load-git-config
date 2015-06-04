@@ -1,0 +1,7 @@
+{
+  "all": [
+  	"Gruntfile.js",
+    "lib/grunt/*.js",
+  	"src/**/*.js"
+  ]
+}
