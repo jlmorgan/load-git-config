@@ -1,6 +1,6 @@
 {
   "name": "load-git-config",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Loads the resolved git configuration.",
   "readme": "README.md",
   "main": "index.js",
