@@ -38,5 +38,5 @@
     "semver-level": "git log origin/dev ^master --format=%b | grep -i semver | cut -d ':' -f 2 | sort -u | head -1 | tr '[:upper:]' '[:lower:]'",
     "version": "git add package.json && git commit -m \"Version bump to $(npm run --silent package-version)\""
   },
-  "version": "0.1.0"
+  "version": "0.2.0"
 }
