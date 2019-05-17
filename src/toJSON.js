@@ -1,26 +1,24 @@
 "use strict";
 
 // Required node modules
-var reduce = require("lodash").reduce;
+const reduce = require("lodash/reduce");
 
 // Required files
-var mergeSplitOption = require("./mergeSplitOption");
-var toObject = require("./toObject");
+const mergeSplitOption = require("./mergeSplitOption");
+const toObject = require("./toObject");
 
 /**
  * Converts a raw git config list output to JSON.
- * @requires {@link lodash|https://lodash.com}
+ *
  * @private
- * @function toJSON
- * @param  {String} rawConfig - Raw git config -l output.
+ * @param {String} rawConfig - Raw git config -l output.
  * @return {Object}
- * @see mergeSplitOption
- * @see toObject
+ * @require {@link lodash|https://lodash.com}
  */
 function toJSON(rawConfig) {
-  var config = {};
-  var delimiter = /\n/;
-  var trimmedRawConfig = [];
+  const config = {};
+  const delimiter = /\n/u;
+  const trimmedRawConfig = [];
 
   return reduce(
     reduce(

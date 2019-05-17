@@ -1,29 +1,24 @@
 "use strict";
 
-// Required node modules
-var _ = require("lodash");
-
-// Aliases
-var get = _.get;
-var set = _.set;
+// Third Party
+const F = require("lodash/fp");
 
 /**
  * Converts a line of key=value pair and appends repeat assignments on to an array for the same key.
- * @requires {@link lodash|https://lodash.com}
+ *
  * @private
- * @function toObject
- * @param  {Object} results - The receiving object.
- * @param  {String} line - The key=value pair.
+ * @param {Object} results - The receiving object.
+ * @param {String} line - The key=value pair.
  * @return {Object}
+ * @require {@link lodash|https://lodash.com}
  */
 function toObject(results, line) {
-  var parts = line.match(/^([^=]+)=(.+?)$/);
-  var path = parts[1];
-  var value = parts[2];
+  const parts = line.match(/^([^=]+)=(.+?)$/u);
+  const [, path, value] = parts || []; // Ignore the initial match.
 
-  return get(results, path) ?
-    set(results, path, [].concat(get(results, path), value)) :
-    set(results, path, value);
+  return F.get(path, results) ?
+    F.set(path, [].concat(F.get(path, results), value), results) :
+    F.set(path, value, results);
 }
 
 module.exports = toObject;
