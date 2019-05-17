@@ -1,18 +1,46 @@
-# Reference: http://editorconfig.org
-# top-most EditorConfig file
+##
+# Editor Config.
+# @see http://editorconfig.org
+##
+
+##
+# Special property that should be specified at the top of the file outside of any sections. Set to true to stop
+# .editorconfig files search on current file.
+##
 root = true
 
-# Unix-style newlines with a newline ending every file
+##
+# Configuration for all files.
+##
 [*]
 charset = utf-8
-end_of_line = lf
-insert_final_newline = true
-trim_trailing_whitespace = true
 
 # Line length
 max_line_length = 120
 
 # Tab indentation
-[*.js]
-indent_style = space
 indent_size = 2
+indent_style = space
+
+# Line endings
+end_of_line = lf
+insert_final_newline = true
+trim_trailing_whitespace = true
+
+##
+# Data files.
+##
+[*.{csv,json}]
+insert_final_newline = false
+
+##
+# make
+##
+[Makefile]
+indent_style = tab
+
+##
+# Markdown
+##
+[*.{md,markdown}]
+max_line_length = off
